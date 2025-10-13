@@ -70,8 +70,3 @@ Quét QR Code hoặc chạy trên emulator/simulator.
 
 npx expo install expo-location react-native-maps @react-native-async-storage/async-storage expo-haptics @expo/vector-icons react-native-gesture-handler react-native-safe-area-context expo-router
 npx expo start --clear
-![photo_3_2025-10-14_02-24-35](https://github.com/user-attachments/assets/62f743f4-dc3e-476a-8548-33e66306770a)
-
-![photo_2_2025-10-14_02-24-35](https://github.com/user-attachments/assets/3228e265-db0e-4a74-bcf3-4a6667c51ea4)
-
-![photo_1_2025-10-14_02-24-35](https://github.com/user-attachments/assets/25c1e04c-5a61-4127-9696-b52eb3370c6b)
