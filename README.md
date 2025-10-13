@@ -1,50 +1,77 @@
-# Welcome to your Expo app 👋
+# 🌍 Geo-Checkin App (React Native + Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Geo-Checkin** là ứng dụng React Native cơ bản được xây dựng bằng **Expo CLI**, cho phép người dùng **check-in vị trí hiện tại (GPS)** và hiển thị **toàn bộ check-in trên bản đồ**.
 
-## Get started
+Ứng dụng sử dụng các API và package phổ biến:
+- 🗺️ `react-native-maps`
+- 📍 `expo-location`
+- 💾 `@react-native-async-storage/async-storage`
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Mục tiêu bài tập
 
-2. Start the app
+> Xây dựng ứng dụng di động có chức năng **check-in vị trí hiện tại** bằng GPS, hiển thị danh sách các điểm đã check-in và đánh dấu (marker) trên bản đồ.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🧩 Tính năng chính
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Tính năng | Mô tả |
+|------------|-------|
+| 📍 **Check-in vị trí hiện tại** | Lấy toạ độ GPS bằng `expo-location`, lưu lại với thời gian và ghi chú |
+| 💾 **Lưu trữ cục bộ** | Dùng `AsyncStorage` để lưu danh sách các lần check-in (offline support) |
+| 🗺️ **Bản đồ trực quan** | Hiển thị các marker tương ứng trên bản đồ (Google Maps / Apple Maps) |
+| 📋 **Danh sách Check-in** | Hiển thị danh sách các lần check-in (FlatList) |
+| 🔗 **Mở Google Maps / Apple Maps** | Khi nhấn vào marker, mở điều hướng đến vị trí đó |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🛠️ Cài đặt & Chạy thử
 
-When you're ready, run:
-
+### 1️⃣ Tạo dự án
 ```bash
-npm run reset-project
-```
+npx create-expo-app geo-checkin
+cd geo-checkin
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Cài đặt dependencies
+npm install @react-native-async-storage/async-storage react-native-maps
+npx expo install expo-location
 
-## Learn more
+npx expo start
+Mở app trong Expo Go (Android/iOS)
+Quét QR Code hoặc chạy trên emulator/simulator.
 
-To learn more about developing your project with Expo, look at the following resources:
+├── app/
+│   ├── _layout.tsx              # Root Stack
+│   └── (tabs)/
+│       ├── _layout.tsx          # Tab Navigator
+│       ├── index.tsx            # Check-in screen
+│       ├── map.tsx              # Map screen
+│       ├── list.tsx             # List screen
+│       ├── modal.tsx            # Modal screen (optional)
+│       └── +not-found.tsx       # 404 handler
+├── utils/
+│   └── TS storage.ts            # AsyncStorage helpers
+└── app.json                     # Expo config (với Google Maps key)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
+## Hướng Dẫn Setup Và Chạy
+### Yêu Cầu Hệ Thống
+- Node.js 20+ LTS
+- Expo CLI: `npm install -g @expo/cli`
+- Expo Go app trên iOS/Android (test device thật cho GPS/maps)
 
-Join our community of developers creating universal apps.
+### Cài Đặt
+ Tạo dự án:
+   ```bash
+   npx create-expo-app@latest GeoCheckinApp --template tabs@54
+   cd GeoCheckinApp
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+npx expo install expo-location react-native-maps @react-native-async-storage/async-storage expo-haptics @expo/vector-icons react-native-gesture-handler react-native-safe-area-context expo-router
+
+npx expo start --clear
+
+![alt text](image-2.png)
+![alt text](image-1.png)
+![alt text](image-3.png)
