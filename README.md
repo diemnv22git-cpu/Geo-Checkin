@@ -72,6 +72,7 @@ npx expo install expo-location react-native-maps @react-native-async-storage/asy
 npx expo start --clear
 
 DEMO
+
 ![image alt](https://github.com/diemnv22git-cpu/Geo-Checkin/blob/919e96cf5cc643510ef5cf34b3a59b33b61b4526/image-2.png)
 ![image alt](https://github.com/diemnv22git-cpu/Geo-Checkin/blob/919e96cf5cc643510ef5cf34b3a59b33b61b4526/image-3.png)
 ![image alt](https://github.com/diemnv22git-cpu/Geo-Checkin/blob/919e96cf5cc643510ef5cf34b3a59b33b61b4526/image-1.png)
