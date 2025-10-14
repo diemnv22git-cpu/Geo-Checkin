@@ -30,7 +30,7 @@
 ## 🛠️ Cài đặt & Chạy thử
 
 ### 1️⃣ Tạo dự án
-```bash
+
 npx create-expo-app geo-checkin
 cd geo-checkin
 
@@ -64,7 +64,7 @@ Quét QR Code hoặc chạy trên emulator/simulator.
 
 ### Cài Đặt
  Tạo dự án:
-   ```bash
+
    npx create-expo-app@latest GeoCheckinApp --template tabs@54
    cd GeoCheckinApp
 
